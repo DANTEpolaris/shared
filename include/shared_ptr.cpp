@@ -44,7 +44,7 @@ template <typename T>
 shared_ptr<T>::shared_ptr(shared_ptr&& x) : ptr_(x.ptr_), counter_(x.counter_)
 {
 	x.ptr_ = nullptr;
-	x.counter_ = nullptr;
+	x.counter_ = nullptr; 
 }
 
 template <typename T>
