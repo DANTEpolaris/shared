@@ -107,7 +107,7 @@ template <typename T>
 auto shared_ptr<T>::operator *() const -> T&
 {
 	if (ptr_ != nullptr) return *ptr_;
-	else throw ("nullptr...");
+	else throw ("nullptr..");
 }
 
 template <typename T>
