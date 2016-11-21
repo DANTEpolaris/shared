@@ -69,6 +69,7 @@ auto shared_ptr<T>::operator = (shared_ptr&& other) -> shared_ptr&
 {
 	if (this != &other) {
 		this = shared_ptr(std::move(other));
+	}
 	return *this;
 }
 
