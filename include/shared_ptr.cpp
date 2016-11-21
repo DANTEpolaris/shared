@@ -68,7 +68,10 @@ template <typename T>
 auto shared_ptr<T>::operator = (shared_ptr&& other) -> shared_ptr&
 {
 	if (this != &other) {
-		this = shared_ptr(std::move(other));
+		this.ptr_ = shared_ptr(std::move(other)).ptr_;
+		this.counter_ = shared_ptr(std::move(other)).counter_;
+		other.ptr_ = nullptr;
+		other.counter_ = 0;
 	}
 	return *this;
 }
